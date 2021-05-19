@@ -7,9 +7,9 @@ import { bindActionCreators } from 'redux';
 
 import * as actions from '../actions/spellActions';
 
-import spellsList from '../components/spellsList';
+import spellsList from '../components/SpellsList';
 import singleSpell from './singleSpell';
-import spellForm from './spellForm';
+import spellForm from './FormContainer';
 
 
 class spellsPage extends Component {

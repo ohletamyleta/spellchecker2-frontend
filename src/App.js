@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-do
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import spellsPage from './containers/spellsPage';
-import spellForm from './containers/spellForm';
+import FormContainer from './containers/FormContainer';
 import singleSpell from './containers/singleSpell';
 
 
@@ -39,7 +39,7 @@ const App = () => (
                 Add a New Spell
               </NavLink>
               <Route path="/spells" component={spellsPage} />
-              <Route path="/spell/new" component={spellForm} />
+              <Route path="/spell/new" component={FormContainer} />
             </div>
             <div id='inner_remaining' />
           </div>
