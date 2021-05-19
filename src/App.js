@@ -40,9 +40,6 @@ const App = () => (
               </NavLink>
               <Route path="/spells" component={spellsPage} />
               <Route path="/spell/new" component={spellForm} />
-              <Route path="/spell/${id}" component={singleSpell} />
-
-
             </div>
             <div id='inner_remaining' />
           </div>
