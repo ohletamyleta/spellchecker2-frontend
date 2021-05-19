@@ -9,6 +9,7 @@ import singleSpell from './containers/singleSpell';
 
 
 
+
 const link = {
   width: '100px',
   padding: '12px',
