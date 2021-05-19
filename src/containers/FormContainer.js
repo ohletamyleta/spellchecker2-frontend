@@ -10,9 +10,16 @@ import * as actions from '../actions/spellActions';
 import Form from '../components/Form'
 
 class FormContainer extends Component {
+  submit = (values) => {
+    console.log(values)
+  }
 
-};
-
+  render() {
+    return (
+      <Form onSubmit={this.submit} />
+    )
+  }
+}
 
 
 export default FormContainer;

@@ -1,33 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Field, reduxForm } from 'react-redux-form';
-
-import { load as loadAccount } from './account'
-
-const data = {
-  name: 'Blood Rage (Homebrew)',
-  desc: 'Upon shedding a drop of blood, the caster is enhanced as a Barbarian in full rage equal to their caster level.',
-  higher_level: 'n/a',
-  range: 'Touch',
-  components: '',
-  material: '',
-  ritual: '',
-  duration: '',
-  concentration: '',
-  casting_time: '',
-  level: '',
-  level_int: '',
-  school: '',
-  dnd_class: '',
-  archetype: '',
-  circles: '',
-};
-
+import { Field, reduxForm } from 'redux-form';
 
 let Form = (props) => {
-  const { handleSubmit, load, pristine, reset, submitting } = props;
+  const { handleSubmit } = props
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={ handleSubmit }>
       <div>
         <label>Spell Name</label>
         <div>
@@ -204,30 +181,18 @@ let Form = (props) => {
           />
         </div>
       </div>
- 
       <div>
-        <button type='submit' disabled={pristine || submitting}>
+        <button type='submit'>
           Submit
         </button>
-        <button type='button' disabled={pristine || submitting} onClick={reset}>
-          Undo Changes
-        </button>
-      </div>
+         </div>
     </form>
-  );
-};
+  )
+}
 
-// // Decorate with reduxForm(). It will read the initialValues prop provided by connect()
-Form = reduxForm({
-  form: 'spells', 
-})(Form);
+// Form = reduxForm({
+//   form: 'spell'
+// })(Form);
 
-// You have to connect() to any reducers that you wish to connect to yourself
-Form = connect(
-  (state) => ({
-    initialValues: state.account.data, // pull initial values from account reducer
-  }),
-  { load: loadAccount } // bind account loading action creator
-)(Form);
 
-export default Form;
+export default reduxForm({ form: 'spell'})(Form);
