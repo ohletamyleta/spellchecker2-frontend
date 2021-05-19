@@ -1,10 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, NavNavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import Header from './components/Header';
+import spellsPage from './containers/spellsPage';
 
-const NavLink = {
+const link = {
   width: '100px',
   padding: '12px',
   margin: '0 6px 6px',
@@ -14,10 +15,11 @@ const NavLink = {
 };
 
 
-const Home = () => (
+const App = () => (
   <Router>
     <div>
       <NavBar />
+      <Header />
       <Route
         exact
         path='/'
@@ -37,9 +39,8 @@ const Home = () => (
           </div>
         )}
       />
-      <Route path='/spells' component={spellsList} />
     </div>
   </Router>
 );
 
-export default Home;
+export default App;
