@@ -1,1 +1,0 @@
-//I will have a logo/title and two links - spell list, and add a spell
