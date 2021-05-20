@@ -30,7 +30,6 @@ class SpellsPage extends Component {
      const {
        spells,
        match,
-       actions: { updateSpell, deleteSpell },
      } = this.props;
 
       return (
