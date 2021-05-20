@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-do
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import spellsPage from './containers/spellsPage';
+import SpellForm from './components/SpellForm';
+import singleSpell from './containers/singleSpell';
+
+
+
 
 const link = {
   width: '100px',
@@ -31,9 +36,13 @@ const App = () => (
               <NavLink to='/spells' className='btn btn-primary margin-right'>
                 See All Spells
               </NavLink>
-              <NavLink to='/spells/new' className='btn btn-primary'>
+              <NavLink to='/spell/new' className='btn btn-primary'>
                 Add a New Spell
               </NavLink>
+              <Switch>
+                <Route path='/spells' component={spellsPage} />
+                <Route path='/spell/new' component={SpellForm} />
+              </Switch>
             </div>
             <div id='inner_remaining' />
           </div>

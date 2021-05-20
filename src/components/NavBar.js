@@ -13,7 +13,7 @@ const link = {
 
 const NavBar = () => {
   return (
-    <div classname='nav'>
+    <div className='nav'>
       <NavLink
         to='/'
         exact

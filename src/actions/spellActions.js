@@ -3,7 +3,7 @@ const getSpells = spells => ({
   spells,
 });
 
-const addSpell = => ({
+const addSpell = spell => ({
   type: 'CREATE_SPELL',
   spell,
 });
