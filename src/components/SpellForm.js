@@ -130,7 +130,7 @@ class SpellForm extends Component {
   render() {
     return (
       <div>
-        <h3>Look at me!</h3>
+      <h4>Add a spell here!  Please add "homebrew" to the Name if it's a custom creation.</h4>
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <div>
             <label>Spell Name</label>
