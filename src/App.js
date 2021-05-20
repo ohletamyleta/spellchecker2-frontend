@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-do
 
 import NavBar from './components/NavBar';
 import Header from './components/Header';
-import spellsPage from './containers/spellsPage';
+import spellsPage from './containers/SpellsPage';
 import SpellForm from './components/SpellForm';
 import singleSpell from './containers/singleSpell';
-
+import Home from './components/Home';
 
 
 
@@ -25,10 +25,11 @@ const App = () => (
     <div>
       <NavBar />
       <Header />
-      <Route
-        exact
-        path='/'
-        render={() => (
+      <Route exact path='/'>
+        <Home />
+      </Route>
+     </div>
+        {/* render={() => (
           <div id='outer'>
             <div className='text-center' id='inner_fixed'>
               <h1>Welcome to Spellchecker!</h1>
@@ -48,7 +49,7 @@ const App = () => (
           </div>
         )}
       />
-    </div>
+    </div> */}
   </Router>
 );
 

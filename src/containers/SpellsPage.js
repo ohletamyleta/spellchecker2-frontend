@@ -7,38 +7,22 @@ import { bindActionCreators } from 'redux';
 
 import * as actions from '../actions/spellActions';
 
-import spellsList from '../components/SpellsList';
+import SpellsList from '../components/SpellsList';
 import singleSpell from './singleSpell';
 import Form from '../components/SpellForm';
 
 
-class spellsPage extends Component {
+class SpellsPage extends Component {
 
   componentDidMount () {
-    const {
-      spells,
-      actions: { fetchSpells },
-    } = this.props;
-    if (spellsList.length === 0) {
-      fetchSpells();
-    }
+   
   }
 
     render() {
-       const {
-         spells,
-         match,
-         actions: { updateSpell, deleteSpell },
-       } = this.props;
+     
       return (
-        <div className='container'>
-          <Switch>
-            <Route exact path={`${match.url}/new`} component={Form} />
-            <Route exact path={`${match.url}/:spellId`} component={singleSpell} />
-          </Switch>
-          <spellsList spells={spells} updateSpell={updateSpell} deleteSpell={deleteSpell} />
-        </div>
-      );
+        <h2>Spells Page in da house!</h2>
+      )
     }
 }
 
@@ -53,4 +37,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(spellsPage);
+)(SpellsPage);
