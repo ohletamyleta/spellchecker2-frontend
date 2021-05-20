@@ -10,13 +10,9 @@ import SpellForm from '../components/SpellForm';
    <div id='outer'>
             <div className='text-center' id='inner_fixed'>
               <h1>Welcome to Spellchecker!</h1>
-              <h3>What would you like to do?</h3>
-              <Link to='/spells' component={SpellsPage}>
-                See All Spells
-              </Link>
-              <Link to='/spell/new' component={SpellForm}>
-                Add a New Spell
-              </Link>
+              <h3>You can view all of the spells in the library</h3>
+              <h3><em>or even add new homebrew creations!</em></h3>
+
               </div>
              </div> 
 )};
