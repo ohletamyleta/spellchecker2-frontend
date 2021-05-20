@@ -199,7 +199,6 @@ class SpellForm extends Component {
                 type='text'
                 onChange={(event) => this.handleMaterialChange(event)}
                 value={this.state.material}
-                value={this.state.material}
                 placeholder='Material'
               />
             </div>

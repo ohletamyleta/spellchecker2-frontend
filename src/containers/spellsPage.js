@@ -9,7 +9,7 @@ import * as actions from '../actions/spellActions';
 
 import spellsList from '../components/SpellsList';
 import singleSpell from './singleSpell';
-import FormContainer from './FormContainer';
+import Form from '../components/SpellForm';
 
 
 class spellsPage extends Component {
@@ -33,7 +33,7 @@ class spellsPage extends Component {
       return (
         <div className='container'>
           <Switch>
-            <Route exact path={`${match.url}/new`} component={FormContainer} />
+            <Route exact path={`${match.url}/new`} component={Form} />
             <Route exact path={`${match.url}/:spellId`} component={singleSpell} />
           </Switch>
           <spellsList spells={spells} updateSpell={updateSpell} deleteSpell={deleteSpell} />

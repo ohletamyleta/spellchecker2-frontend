@@ -36,11 +36,13 @@ const App = () => (
               <NavLink to='/spells' className='btn btn-primary margin-right'>
                 See All Spells
               </NavLink>
-              <NavLink to='/spells/new' className='btn btn-primary'>
+              <NavLink to='/spell/new' className='btn btn-primary'>
                 Add a New Spell
               </NavLink>
-              <Route path="/spells" component={spellsPage} />
-              <Route path="/spells/new" component={SpellForm} />
+              <Switch>
+                <Route path='/spells' component={spellsPage} />
+                <Route path='/spell/new' component={SpellForm} />
+              </Switch>
             </div>
             <div id='inner_remaining' />
           </div>
