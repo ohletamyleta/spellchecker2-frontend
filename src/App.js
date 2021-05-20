@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-do
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import spellsPage from './containers/spellsPage';
-import FormContainer from './containers/SpellForm';
+import SpellForm from './components/SpellForm';
 import singleSpell from './containers/singleSpell';
 
 

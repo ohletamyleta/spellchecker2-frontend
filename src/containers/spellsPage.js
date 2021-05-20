@@ -33,7 +33,6 @@ class spellsPage extends Component {
       return (
         <div className='container'>
           <Switch>
-            <Route exact path={`${match.url}/:spellId/edit`} component={FormContainer}/>
             <Route exact path={`${match.url}/new`} component={FormContainer} />
             <Route exact path={`${match.url}/:spellId`} component={singleSpell} />
           </Switch>
