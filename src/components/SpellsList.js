@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 
-class SpellsList extends Component {
 
-  render() {
+import SingleSpell from '../containers/SingleSpell';
+
+function SpellsList(spells) {
+  console.log(spells);
+// const allSpells = props.spells;
+// const spellItems = spells.map((spell) => <li>{spell.name} {spell.desc} {spell.level}</li>
 return (
-  <h1>HI</h1>
-)
+  <div>
+    <h2>Spell Scroll Library</h2>
   
+  </div>
+);
 }
-
-}
-
 export default SpellsList;
