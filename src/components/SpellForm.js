@@ -25,21 +25,21 @@ class SpellForm extends Component {
       circles: '',
     };
 
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
-    // this.baseState = this.state;
+    this.baseState = this.state;
   }
 
-  // resetForm = () => this.setState(this.baseState);
+  resetForm = () => this.setState(this.baseState);
 
   handleSubmit = (event) => {
     event.preventDefault();
   // debugger;
     this.props.createSpell(this.state);
-    // this.resetForm();
+    this.resetForm();
   };
 
-  handleInputChange = event => {
+  handleChange = event => {
     const target = event.target;
     const name = target.name;
     const value = target.value
@@ -64,7 +64,7 @@ class SpellForm extends Component {
                 name='name'
                 type='text'
                 value={this.state.name}
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 placeholder='Spell Name'
               />
             </div>
@@ -75,7 +75,7 @@ class SpellForm extends Component {
               <textarea
                 name='desc'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.desc}
                 placeholder='Description'
               />
@@ -87,7 +87,7 @@ class SpellForm extends Component {
               <input
                 name='higher_level'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.higher_level}
                 placeholder='Higher Level'
               />
@@ -99,7 +99,7 @@ class SpellForm extends Component {
               <input
                 name='range'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.range}
                 placeholder='Range'
               />
@@ -111,7 +111,7 @@ class SpellForm extends Component {
               <input
                 name='components'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.components}
                 placeholder='Components'
               />
@@ -123,7 +123,7 @@ class SpellForm extends Component {
               <input
                 name='material'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.material}
                 placeholder='Material'
               />
@@ -135,7 +135,7 @@ class SpellForm extends Component {
               <input
                 name='ritual'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.ritual}
                 placeholder='Ritual'
               />
@@ -147,7 +147,7 @@ class SpellForm extends Component {
               <input
                 name='duration'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.duration}
                 placeholder='Duration'
               />
@@ -159,7 +159,7 @@ class SpellForm extends Component {
               <input
                 name='concentration'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.concentration}
                 placeholder='Concentration'
               />
@@ -171,7 +171,7 @@ class SpellForm extends Component {
               <input
                 name='casting_time'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.casting_time}
                 placeholder='Casting Time'
               />
@@ -183,7 +183,7 @@ class SpellForm extends Component {
               <input
                 name='level'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.level}
                 placeholder='Level'
               />
@@ -195,7 +195,7 @@ class SpellForm extends Component {
               <input
                 name='level_int'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.level_int}
                 placeholder='Level (Number)'
               />
@@ -207,7 +207,7 @@ class SpellForm extends Component {
               <input
                 name='school'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.school}
                 placeholder='School'
               />
@@ -219,7 +219,7 @@ class SpellForm extends Component {
               <input
                 name='dnd_class'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.dnd_class}
                 placeholder='Caster Class'
               />
@@ -231,7 +231,7 @@ class SpellForm extends Component {
               <input
                 name='archetype'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.archetype}
                 placeholder='Archetype'
               />
@@ -243,7 +243,7 @@ class SpellForm extends Component {
               <input
                 name='circles'
                 type='text'
-                onChange={this.handleInputChange}
+                onChange={this.handleChange}
                 value={this.state.circles}
                 placeholder='Circles'
               />
@@ -261,8 +261,8 @@ class SpellForm extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    createSpell: () => {
-      dispatch(createSpell())
+    createSpell: formData => {
+      dispatch(createSpell(formData))
     }
   }
 };
