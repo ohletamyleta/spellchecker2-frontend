@@ -31,6 +31,7 @@ const SingleSpell = ({
 }) => (
   <div className='SpellCard'>
     <h4>{spell.name}</h4>
+    
 
   </div>
 );

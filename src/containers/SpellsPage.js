@@ -23,7 +23,6 @@ class SpellsPage extends Component {
       if (spells.length === 0) {
         fetchSpells();
       }
-      console.log(spells);
   }
 
     render() {
