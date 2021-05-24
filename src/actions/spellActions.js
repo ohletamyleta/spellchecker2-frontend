@@ -30,7 +30,7 @@ method: 'POST',
 headers: {
   'Content-Type': 'application/json',
 },
-body: JSON.stringify(spell),
+body: JSON.stringify({ spell }),
 })
 .then(response => response.json())
 .then((spell) => {

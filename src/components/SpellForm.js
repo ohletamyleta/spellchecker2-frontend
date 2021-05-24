@@ -24,113 +24,38 @@ class SpellForm extends Component {
       archetype: '',
       circles: '',
     };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+
+    // this.baseState = this.state;
   }
 
-  handleSubmit = event => {
+  // resetForm = () => this.setState(this.baseState);
+
+  handleSubmit = (event) => {
     event.preventDefault();
-    this.props.createSpell(this.state)
+  // debugger;
+    this.props.createSpell(this.state);
+    // this.resetForm();
+  };
+
+  handleInputChange = event => {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value
+
+    this.setState({
+      [name]: event.target.value,
+    });
   }
-
-  handleNameChange = (event) => {
-    this.setState({
-      name: event.target.value,
-    });
-  };
-
-  handleDescChange = (event) => {
-    this.setState({
-      desc: event.target.value,
-    });
-  };
-
-  handleHigherLevelChange = (event) => {
-    this.setState({
-      higher_level: event.target.value,
-    });
-  };
-
-  handleRangeChange = (event) => {
-    this.setState({
-      range: event.target.value,
-    });
-  };
-
-  handleComponentsChange = (event) => {
-    this.setState({
-      components: event.target.value,
-    });
-  };
-
-  handleMaterialChange = (event) => {
-    this.setState({
-      material: event.target.value,
-    });
-  };
-
-  handleRitualChange = (event) => {
-    this.setState({
-      ritual: event.target.value,
-    });
-  };
-
-  handleDurationChange = (event) => {
-    this.setState({
-      duration: event.target.value,
-    });
-  };
-
-  handleConcentrationChange = (event) => {
-    this.setState({
-      concentration: event.target.value,
-    });
-  };
-
-  handleCastingTimeChange = (event) => {
-    this.setState({
-      casting_time: event.target.value,
-    });
-  };
-
-  handleLevelChange = (event) => {
-    this.setState({
-      level: event.target.value,
-    });
-  };
-
-  handleLevelIntChange = (event) => {
-    this.setState({
-      level_int: event.target.value,
-    });
-  };
-
-  handleSchoolChange = (event) => {
-    this.setState({
-      school: event.target.value,
-    });
-  };
-
-  handleDndClassChange = (event) => {
-    this.setState({
-      dnd_class: event.target.value,
-    });
-  };
-
-  handleArchetypeChange = (event) => {
-    this.setState({
-      archetype: event.target.value,
-    });
-  };
-
-  handleCirclesChange = (event) => {
-    this.setState({
-      circles: event.target.value,
-    });
-  };
 
   render() {
     return (
       <div>
-      <h4>Add a spell here!  Please add "homebrew" to the Name if it's a custom creation.</h4>
+        <h4>
+          Add a spell here! Please add "homebrew" to the Name if it's a custom
+          creation.
+        </h4>
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <div>
             <label>Spell Name</label>
@@ -138,7 +63,8 @@ class SpellForm extends Component {
               <input
                 name='name'
                 type='text'
-                onChange={(event) => this.handleNameChange(event)}
+                value={this.state.name}
+                onChange={this.handleInputChange}
                 placeholder='Spell Name'
               />
             </div>
@@ -149,7 +75,7 @@ class SpellForm extends Component {
               <textarea
                 name='desc'
                 type='text'
-                onChange={(event) => this.handleDescChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.desc}
                 placeholder='Description'
               />
@@ -161,7 +87,7 @@ class SpellForm extends Component {
               <input
                 name='higher_level'
                 type='text'
-                onChange={(event) => this.handleHigherLevelChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.higher_level}
                 placeholder='Higher Level'
               />
@@ -173,7 +99,7 @@ class SpellForm extends Component {
               <input
                 name='range'
                 type='text'
-                onChange={(event) => this.handleRangeChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.range}
                 placeholder='Range'
               />
@@ -185,7 +111,7 @@ class SpellForm extends Component {
               <input
                 name='components'
                 type='text'
-                onChange={(event) => this.handleComponentsChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.components}
                 placeholder='Components'
               />
@@ -197,7 +123,7 @@ class SpellForm extends Component {
               <input
                 name='material'
                 type='text'
-                onChange={(event) => this.handleMaterialChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.material}
                 placeholder='Material'
               />
@@ -209,7 +135,7 @@ class SpellForm extends Component {
               <input
                 name='ritual'
                 type='text'
-                onChange={(event) => this.handleRitualChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.ritual}
                 placeholder='Ritual'
               />
@@ -221,7 +147,7 @@ class SpellForm extends Component {
               <input
                 name='duration'
                 type='text'
-                onChange={(event) => this.handleDurationChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.duration}
                 placeholder='Duration'
               />
@@ -233,7 +159,7 @@ class SpellForm extends Component {
               <input
                 name='concentration'
                 type='text'
-                onChange={(event) => this.handleConcentrationChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.concentration}
                 placeholder='Concentration'
               />
@@ -245,7 +171,7 @@ class SpellForm extends Component {
               <input
                 name='casting_time'
                 type='text'
-                onChange={(event) => this.handleCastingTimeChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.casting_time}
                 placeholder='Casting Time'
               />
@@ -257,7 +183,7 @@ class SpellForm extends Component {
               <input
                 name='level'
                 type='text'
-                onChange={(event) => this.handleLevelChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.level}
                 placeholder='Level'
               />
@@ -269,7 +195,7 @@ class SpellForm extends Component {
               <input
                 name='level_int'
                 type='text'
-                onChange={(event) => this.handleLevelIntChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.level_int}
                 placeholder='Level (Number)'
               />
@@ -281,7 +207,7 @@ class SpellForm extends Component {
               <input
                 name='school'
                 type='text'
-                onChange={(event) => this.handleSchoolChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.school}
                 placeholder='School'
               />
@@ -293,7 +219,7 @@ class SpellForm extends Component {
               <input
                 name='dnd_class'
                 type='text'
-                onChange={(event) => this.handleDndClassChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.dnd_class}
                 placeholder='Caster Class'
               />
@@ -305,7 +231,7 @@ class SpellForm extends Component {
               <input
                 name='archetype'
                 type='text'
-                onChange={(event) => this.handleArchetypeChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.archetype}
                 placeholder='Archetype'
               />
@@ -317,7 +243,7 @@ class SpellForm extends Component {
               <input
                 name='circles'
                 type='text'
-                onChange={(event) => this.handleCirclesChange(event)}
+                onChange={this.handleInputChange}
                 value={this.state.circles}
                 placeholder='Circles'
               />
@@ -342,6 +268,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(null, mapDispatchToProps)(SpellForm);
+
 
 
 
