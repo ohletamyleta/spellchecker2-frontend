@@ -25,16 +25,22 @@ const SingleSpell = ({
     dnd_class,
     archetype,
     circles,
+    id,
   },
   spell,
   match,
 }) => (
-  <div className='SpellCard'>
-    <h4>{spell.name}</h4>
-    <p>{spell.desc}</p>
-    <p>{spell.level}</p>
-    
-
+  <div>
+    <div className='SpellCard'>
+      <h2>{spell.name}</h2>
+      <p>{spell.desc}</p>
+      <p>{spell.level}</p>
+    </div>
+    <div className='show-link'>
+      <Link to={`${match.url}/${id}`} className='btn'>
+        View Details
+      </Link>
+    </div>
   </div>
 );
 
