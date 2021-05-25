@@ -1,4 +1,9 @@
-import React, {useState} from 'react';
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+
+
 import SingleSpell from './SingleSpell';
 
 
@@ -20,5 +25,3 @@ const SpellsList = ({ spells, fallback }) => {
 
 
 export default SpellsList;
-
-//  .data.index.attributes
