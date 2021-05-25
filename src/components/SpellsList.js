@@ -3,44 +3,44 @@ import { connect } from 'react-redux';
 
 import SingleSpell from '../containers/SingleSpell';
 
-// function SpellsList() {
-//   console.log(spells);
+function SpellsList(spells) {
+  console.log(spells);
 
-  // return (
-  //  <h2>Spell Scroll Library</h2>
+  return (
+   <h2>Spell Scroll Library</h2>
 
-  // )
+  );
 
-  class SpellsList extends Component {
+//   class SpellsList extends Component {
 
-    constructor(props) {
-      super(props);
+//     constructor(props) {
+//       super(props);
 
-      this.state = {
-        spells: [],
-      };
-    }
+//       this.state = {
+//         spells: [],
+//       };
+//     }
 
 
-  render() {
-return (
-  <div>
-    <div className='Title'>
-      <h2>Spell Scroll Library</h2>
-    </div>
-    <div className='spells'>
-      {this.state.spells.map((spell) => (
-        <SingleSpell
-          name={spell.name}
-          desc={spell.desc}
-          level={spell.level}
-          key={spell.id.value}
-          />
-      ))}
-    </div>
-  </div>
-);
-}
-  }
+//   render() {
+// return (
+//   <div>
+//     <div className='Title'>
+//       <h2>Spell Scroll Library</h2>
+//     </div>
+//     <div className='spells'>
+//       {this.state.spells.map((spell) => (
+//         <SingleSpell
+//           name={spell.name}
+//           desc={spell.desc}
+//           level={spell.level}
+//           key={spell.id.value}
+//           />
+//       ))}
+//     </div>
+//   </div>
+// );
+// }
+ }
 
 export default SpellsList;
