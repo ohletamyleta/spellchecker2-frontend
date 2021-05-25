@@ -8,7 +8,6 @@ import { Link, withRouter } from 'react-router-dom';
  
 
 const SingleSpell = ({
-  spell: {
     name,
     desc,
     higher_level,
@@ -26,23 +25,17 @@ const SingleSpell = ({
     archetype,
     circles,
     id,
-  },
-  spell,
-  match,
-}) => (
+  }) => {
+    return(
   <div>
     <div className='SpellCard'>
-      <h2>{spell.name}</h2>
-      <p>{spell.desc}</p>
-      <p>{spell.level}</p>
-    </div>
-    <div className='show-link'>
-      <Link to={`${match.url}/${id}`} className='btn'>
-        View Details
-      </Link>
+      <h2>{SingleSpell.name}</h2>
+      <p>{SingleSpell.desc}</p>
+      <p>{SingleSpell.level}</p>
     </div>
   </div>
-);
+    )
+  }
 
 
 export default withRouter(SingleSpell);

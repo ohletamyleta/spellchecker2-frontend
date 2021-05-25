@@ -1,42 +1,27 @@
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
+
 import SingleSpell from './SingleSpell';
 
-const SpellsList = (spells)=> (
 
+const SpellsList = ({ spells, fallback }) => {
 
+  // console.log(spells);
 
-  <div>
-   <h2>Spell Scroll Library</h2>
-   <div className="row">
-     {Spells
-     .map(spell => (
-       <SingleSpell
-       key={spell.id}
-       spell={spell}
-       />
-     ))}
-   </div>
-  </div>
-  );
-
-
-
-
-// import SingleSpell from '../containers/SingleSpell';
-
-// function SpellsList(spells) {
-//   console.log(spells);
-// // const allSpells = props.spells;
-// // const spellItems = spells.map((spell) => <li>{spell.name} {spell.desc} {spell.level}</li>
-// return (
-//   <div>
-//     <h2>Spell Scroll Library</h2>
+  if (!spells || !spells.data.length ) {
+    return fallback;
+  } else {
+    console.log(spells);
   
-//   </div>
-// );
-// }
+  return spells.data.map(({ id, name, desc, level }) => {
+  return <SingleSpell id={id} key={id} name={name} desc={desc} level={level} />;
+});
+  }
 
-// export default SpellsList;
+  }
+
+
+export default SpellsList;

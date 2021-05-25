@@ -16,12 +16,6 @@ import SpellDetail from '../components/SpellDetail';
 
 class SpellsPage extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state=({
-      spells: ''
-    })
-  }
 
   componentDidMount () {
    const {
@@ -29,13 +23,16 @@ class SpellsPage extends Component {
      actions: { fetchSpells },
       } = this.props;
      
-      if (spells.length === 0) {
+      if (!spells) {
         fetchSpells();
       }
 
   }
 
+
+
     render() {
+    
      const {
        spells,
        match,
@@ -45,8 +42,9 @@ class SpellsPage extends Component {
 
       return (
         <div className='container'>
-          <h2>Spells Page in da house!</h2>
-          <SpellsList spells={spells} />
+
+          <h2>Spell Scroll Library</h2>
+        <SpellsList spells={spells} fallback={"loading..."} />
 
         </div>
       );
@@ -54,7 +52,7 @@ class SpellsPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  spells: state.spells,
+  spells: state.spells.spells,
 });
 
 const mapDispatchToProps = (dispatch) => ({
