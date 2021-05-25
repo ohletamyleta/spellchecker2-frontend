@@ -8,11 +8,20 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/spellActions';
 
 import SpellsList from '../components/SpellsList';
-import SingleSpell from './SingleSpell';
-import Form from '../components/SpellForm';
+
+import SingleSpell from '../components/SingleSpell';
+import SpellDetail from '../components/SpellDetail';
+
 
 
 class SpellsPage extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state=({
+      spells: ''
+    })
+  }
 
   componentDidMount () {
    const {
@@ -23,7 +32,7 @@ class SpellsPage extends Component {
       if (spells.length === 0) {
         fetchSpells();
       }
-      console.log(spells);
+
   }
 
     render() {
@@ -32,10 +41,13 @@ class SpellsPage extends Component {
        match,
      } = this.props;
 
+
+
       return (
-        <div>
+        <div className='container'>
           <h2>Spells Page in da house!</h2>
-          <SpellsList spells={spells}/>
+          <SpellsList spells={spells} />
+
         </div>
       );
     }
