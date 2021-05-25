@@ -8,9 +8,9 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/spellActions';
 
 import SpellsList from '../components/SpellsList';
+
 import SingleSpell from '../components/SingleSpell';
 import SpellDetail from '../components/SpellDetail';
-
 
 
 
@@ -32,6 +32,7 @@ class SpellsPage extends Component {
       if (spells.length === 0) {
         fetchSpells();
       }
+
   }
 
     render() {
@@ -40,12 +41,13 @@ class SpellsPage extends Component {
        match,
      } = this.props;
 
- 
+
 
       return (
         <div className='container'>
           <h2>Spells Page in da house!</h2>
           <SpellsList spells={spells} />
+
         </div>
       );
     }
