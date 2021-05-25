@@ -14,6 +14,13 @@ import Form from '../components/SpellForm';
 
 class SpellsPage extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state=({
+      spells: []
+    })
+  }
+
   componentDidMount () {
    const {
      spells,
@@ -26,15 +33,15 @@ class SpellsPage extends Component {
   }
 
     render() {
-     const {
-       spells,
-       match,
-     } = this.props;
+    //  const {
+    //    spells,
+    //    match,
+    //  } = this.props;
 
       return (
         <div>
           <h2>Spells Page in da house!</h2>
-          <SpellsList spells={spells}/>
+          <SpellsList spells={this.state.spells}/>
         </div>
       );
     }
