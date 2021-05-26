@@ -9,7 +9,6 @@ import * as actions from '../actions/spellActions';
 
 import SpellsList from '../components/SpellsList';
 
-import SingleSpell from '../components/SingleSpell';
 import SpellDetail from '../components/SpellDetail';
 
 
@@ -29,8 +28,6 @@ class SpellsPage extends Component {
 
   }
 
-
-
     render() {
     
      const {
@@ -45,6 +42,8 @@ class SpellsPage extends Component {
 
           <h2>Spell Scroll Library</h2>
         <SpellsList spells={spells} fallback={"loading..."} />
+
+        <Route path={`${match.url}/:spellId`} component={SpellDetail}/>
 
         </div>
       );

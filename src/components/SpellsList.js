@@ -1,13 +1,11 @@
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 
 
-import SingleSpell from './SingleSpell';
 
-
-const SpellsList = ({ spells, fallback }) => {
+const SpellsList = ({ spells, fallback, match }) => {
 
   // console.log(spells);
 
@@ -16,12 +14,34 @@ const SpellsList = ({ spells, fallback }) => {
   } else {
     console.log(spells);
   
-  return spells.data.map(({ id, name, desc, level }) => {
-  return <SingleSpell id={id} key={id} name={name} desc={desc} level={level} />;
+  return spells.data.map((spell, index) => {
+
+    return (
+      <div>
+        <div className='SpellCard'>
+          <h2 key={spell.id}>{spell.attributes.name}</h2>
+          <p>{spell.attributes.desc}</p>
+          <p>
+            <strong>{spell.attributes.level}</strong>
+          </p>
+          <h4>
+            <em>
+              <Link key={spell.id} to={`/spell/${spell.id}`}>More Details</Link>
+            </em>
+          </h4>
+        </div>
+      </div>
+    );
+
+
+
+
 });
   }
 
   }
 
 
-export default SpellsList;
+
+export default withRouter(SpellsList);
+
