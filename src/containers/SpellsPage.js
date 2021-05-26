@@ -8,8 +8,8 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/spellActions';
 
 import SpellsList from '../components/SpellsList';
-import SpellDetail from '../components/SpellDetail';
 
+import SpellDetail from '../components/SpellDetail';
 
 
 
@@ -25,6 +25,7 @@ class SpellsPage extends Component {
       if (!spells) {
         fetchSpells();
       }
+
   }
 
     render() {
@@ -34,13 +35,16 @@ class SpellsPage extends Component {
        match,
      } = this.props;
 
- 
+
 
       return (
         <div className='container'>
+
           <h2>Spell Scroll Library</h2>
         <SpellsList spells={spells} fallback={"loading..."} />
+
         <Route path={`${match.url}/:spellId`} component={SpellDetail}/>
+
         </div>
       );
     }
