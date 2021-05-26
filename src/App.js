@@ -23,7 +23,8 @@ class App extends Component {
       <Switch>
         <Route exact path='/'component={Home}/>
         <Route path='/spells' component={SpellsPage}/>
-        <Route path='/spell/new' component={SpellForm}/>        {/* <Route path='/spell/${spell.id}' component={SpellDetail}/> */}
+        <Route path='/spell/new' component={SpellForm}/>   
+        <Route path='/spell/:id' component={SpellDetail}/>
       </Switch>
      </div>
   </Router>
