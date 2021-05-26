@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import SingleSpell from '../components/SingleSpell';
+
 
 
 
@@ -10,7 +11,7 @@ const SpellsList = ({ spells, fallback, match }) => {
   if (!spells || !spells.data.length ) {
     return fallback;
   } else {
-    console.log(spells);
+    // console.log(spells);
   
   return spells.data.map((spell, index) => {
   return <SingleSpell spell={spell} key={spell.id} />;

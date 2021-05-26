@@ -24,7 +24,7 @@ class App extends Component {
         <Route exact path='/'component={Home}/>
         <Route path='/spells' component={SpellsPage}/>
         <Route path='/spell/new' component={SpellForm}/>   
-        <Route exact path='/spell/:id' component={SpellDetail}/>
+        <Route path='/spell/:id' component={SpellDetail}/>
       </Switch>
      </div>
   </Router>

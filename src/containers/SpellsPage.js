@@ -2,7 +2,7 @@
 // NAME, DESC, LEVEL, DND_CLASS
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
 import * as actions from '../actions/spellActions';
@@ -31,16 +31,13 @@ class SpellsPage extends Component {
     
      const {
        spells,
-       match,
      } = this.props;
 
  
 
       return (
         <div className='container'>
-          <h2>Spell Scroll Library</h2>
-        <SpellsList spells={spells} fallback={"loading..."} />
-        <Route path={`${match.url}/:spellId`} component={SpellDetail}/>
+          <SpellsList spells={spells} fallback={'loading...'} />
         </div>
       );
     }

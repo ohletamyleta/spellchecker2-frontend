@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import SpellDetail from '../components/SpellDetail';
 
 const SingleSpell = (props) => {
   let { spell } = props;
-
+// console.log(spell);
   return (
     <div>
       <div className='SpellCard'>
@@ -14,7 +15,7 @@ const SingleSpell = (props) => {
         </p>
         <h4>
           <em>
-            <Link key={spell.id} spell={spell} to={`/spell/${spell.id}`}>
+            <Link key={spell.id} spell={props} to={`/spell/${spell.id}`}>
               More Details
             </Link>
           </em>
@@ -25,4 +26,4 @@ const SingleSpell = (props) => {
 }
 
 
-   export default SingleSpell;
+   export default withRouter(SingleSpell);

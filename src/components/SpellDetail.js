@@ -1,15 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 
-const SpellDetail = (spell) => {
+const SpellDetail = ({ spell }) => {
 
 
 console.log(spell);
 
   return (
-    <div>
+    <div className="detail-card">
       <h2> THERE!</h2>
     </div>
+
 
   );
  }
@@ -17,8 +19,4 @@ console.log(spell);
 
 export default SpellDetail;
 
-   {
-     /* <div className="SpellCard">
-      <h2>{spell.name}</h2>
-    </div> */
-   }
+ 
