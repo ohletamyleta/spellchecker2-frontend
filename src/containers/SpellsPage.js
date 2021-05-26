@@ -16,7 +16,7 @@ import SpellDetail from '../components/SpellDetail';
 class SpellsPage extends Component {
 
 
-  componentDidMount () {
+  componentDidMount() {
    const {
      spells,
      actions: { fetchSpells },
@@ -27,13 +27,14 @@ class SpellsPage extends Component {
       }
   }
 
+ 
     render() {
     
      const {
        spells,
+       match
      } = this.props;
 
- 
 
       return (
         <div className='container'>

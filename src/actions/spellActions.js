@@ -20,9 +20,6 @@ export const fetchSpells = () => dispatch => fetch(`http://localhost:3001/api/v1
 .then(spells => dispatch(getSpells(spells)))
 .catch(error => console.log(error));
 
-
-
-
 export const createSpell = spell => dispatch => fetch(`http://localhost:3001/api/v1/spells`, {
 method: 'POST',
 headers: {

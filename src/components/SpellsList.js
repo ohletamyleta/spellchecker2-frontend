@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+
 import SingleSpell from '../components/SingleSpell';
 
 
@@ -20,4 +20,4 @@ const SpellsList = ({ spells, fallback, match }) => {
   }
 
 
-export default withRouter(SpellsList);
+export default SpellsList;

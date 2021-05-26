@@ -15,7 +15,7 @@ const SingleSpell = (props) => {
         </p>
         <h4>
           <em>
-            <Link key={spell.id} spell={props} to={`/spell/${spell.id}`}>
+            <Link to={`/spell/${spell.id}`}>
               More Details
             </Link>
           </em>
@@ -27,3 +27,5 @@ const SingleSpell = (props) => {
 
 
    export default withRouter(SingleSpell);
+
+  //  key={spell.id} spell={props}
