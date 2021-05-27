@@ -12,7 +12,7 @@ import Col from 'react-bootstrap/Col'
 import CardDeck from 'react-bootstrap/CardDeck'
 
 import SpellsList from '../components/SpellsList';
-// import SearchBar from '../components/SearchBar';
+
 
 class SpellsPage extends Component {
 
@@ -26,6 +26,7 @@ class SpellsPage extends Component {
       if (!spells) {
         fetchSpells();
       }
+
   }
  
      render() {
@@ -33,6 +34,7 @@ class SpellsPage extends Component {
      const {
        spells
      } = this.props;
+
 
 
       return (
@@ -49,10 +51,11 @@ class SpellsPage extends Component {
           <CardDeck>     
 
           <SpellsList spells={spells} fallback={'loading...'} />
-       
+
           </CardDeck>
           </Row>
         </Container>
+
       );
     }
 }
