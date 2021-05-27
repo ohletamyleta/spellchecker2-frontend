@@ -6,6 +6,11 @@ import { bindActionCreators } from 'redux';
 
 import * as actions from '../actions/spellActions';
 
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import CardDeck from 'react-bootstrap/CardDeck'
+
 import SpellsList from '../components/SpellsList';
 
 
@@ -33,12 +38,24 @@ class SpellsPage extends Component {
 
 
       return (
-        <div className='container'>
-          <h2>Spell Scroll Library</h2>
+        <Container>
+       
+        <div className='text-center'>
+  
+          <h1>Spell Scroll Library</h1>
+          <br></br>
+          <br></br>
+        </div>
           {/* <SearchBar spells={spells}/> */}
+        <Row>
+          <CardDeck>     
+
           <SpellsList spells={spells} fallback={'loading...'} />
 
-        </div>
+          </CardDeck>
+          </Row>
+        </Container>
+
       );
     }
 }

@@ -1,11 +1,15 @@
 import React from 'react';
 
+import Container from 'react-bootstrap/Container'
+
+
 
 const DetailPage = ({ spell }) => {
 
 
 return (
-  <div className="Detail-card">
+  <Container>
+  <div className="text-center">
     
     <h2>Details for {spell.name}</h2>
     <h4>{spell.level}</h4>
@@ -23,8 +27,9 @@ return (
     <p>Archetype: {spell.archetype}</p>
     <p>Circles: {spell.circles}</p>
   </div>
-
+</Container>
 )};
+
 
 
 

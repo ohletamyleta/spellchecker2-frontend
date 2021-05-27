@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createSpell } from '../actions/spellActions';
 
+import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+
+
 class SpellForm extends Component {
   constructor(props) {
     super(props);
@@ -51,208 +56,186 @@ class SpellForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="text-center">
         <h4>
           Add a spell here! Please add "homebrew" to the Name if it's a custom
           creation.
         </h4>
-        <form onSubmit={(event) => this.handleSubmit(event)}>
-          <div>
-            <label>Spell Name</label>
-            <div>
-              <input
+        <br></br>
+        <br></br>
+        <Form onSubmit={(event) => this.handleSubmit(event)}>
+          <Form.Group controlId="formSpellName">
+            <Form.Label>Spell Name</Form.Label>
+              <Form.Control
                 name='name'
                 type='text'
                 value={this.state.name}
                 onChange={this.handleChange}
                 placeholder='Spell Name'
               />
-            </div>
-          </div>
-          <div>
-            <label>Description</label>
-            <div>
-              <textarea
+            </Form.Group>
+            <Form.Group controlId="formSpellDesc"> 
+            <Form.Label>Description</Form.Label>
+              <Form.Control as="textarea" rows={5}
                 name='desc'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.desc}
                 placeholder='Description'
               />
-            </div>
-          </div>
-          <div>
-            <label>Higher Level</label>
-            <div>
-              <input
+          </Form.Group>
+          <Form.Group controlId="spellHigherLevel">
+            <Form.Label>Higher Level</Form.Label>
+              <Form.Control
                 name='higher_level'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.higher_level}
                 placeholder='Higher Level'
               />
-            </div>
-          </div>
-          <div>
-            <label>Range</label>
-            <div>
-              <input
+           </Form.Group>
+           <Form.Group controlId="spellRange">
+            <Form.Label>Range</Form.Label>
+              <Form.Control
                 name='range'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.range}
                 placeholder='Range'
               />
-            </div>
-          </div>
-          <div>
-            <label>Components</label>
-            <div>
-              <input
+          </Form.Group>
+           <Form.Group controlId="spellComponents">
+            <Form.Label>Components</Form.Label>
+               <Form.Control
                 name='components'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.components}
                 placeholder='Components'
               />
-            </div>
-          </div>
-          <div>
-            <label>Material</label>
-            <div>
-              <input
+           </Form.Group>
+           <Form.Group controlId="spellMaterial">
+            <Form.Label>Material</Form.Label>
+              <Form.Control
                 name='material'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.material}
                 placeholder='Material'
               />
-            </div>
-          </div>
-          <div>
-            <label>Ritual</label>
-            <div>
-              <input
+         </Form.Group>
+           <Form.Group controlId="spellRitual">
+            <Form.Label>Ritual</Form.Label>
+              <Form.Control
                 name='ritual'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.ritual}
                 placeholder='Ritual'
               />
-            </div>
-          </div>
-          <div>
-            <label>Duration</label>
-            <div>
-              <input
+         </Form.Group>
+           <Form.Group controlId="spellDuration">
+            <Form.Label>Duration</Form.Label>
+                    <Form.Control
                 name='duration'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.duration}
                 placeholder='Duration'
               />
-            </div>
-          </div>
-          <div>
-            <label>Concentration</label>
-            <div>
-              <input
+        </Form.Group>
+           <Form.Group controlId="sepllConcentration">
+            <Form.Label>Concentration</Form.Label>
+         
+              <Form.Control
                 name='concentration'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.concentration}
                 placeholder='Concentration'
               />
-            </div>
-          </div>
-          <div>
-            <label>Casting Time </label>
-            <div>
-              <input
+      </Form.Group>
+           <Form.Group controlId="spellCastingTime">
+            <Form.Label>Casting Time </Form.Label>
+            
+              <Form.Control
                 name='casting_time'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.casting_time}
                 placeholder='Casting Time'
               />
-            </div>
-          </div>
-          <div>
-            <label>Level</label>
-            <div>
-              <input
+      </Form.Group>
+           <Form.Group controlId="spellLevel">
+            <Form.Label>Level</Form.Label>
+    
+              <Form.Control
                 name='level'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.level}
                 placeholder='Level'
               />
-            </div>
-          </div>
-          <div>
-            <label>Level (Number)</label>
-            <div>
-              <input
+        </Form.Group>
+           <Form.Group controlId="spellLevelInt">
+            <Form.Label>Level (Number)</Form.Label>
+           
+              <Form.Control
                 name='level_int'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.level_int}
                 placeholder='Level (Number)'
               />
-            </div>
-          </div>
-          <div>
-            <label>School</label>
-            <div>
-              <input
+         </Form.Group>
+           <Form.Group controlId="spellSchool">
+            <Form.Label>School</Form.Label>
+       
+              <Form.Control
                 name='school'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.school}
                 placeholder='School'
               />
-            </div>
-          </div>
-          <div>
-            <label>Caster Class</label>
-            <div>
-              <input
+         </Form.Group>
+           <Form.Group controlId="spellCasterClass">
+            <Form.Label>Caster Class</Form.Label>
+
+              <Form.Control
                 name='dnd_class'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.dnd_class}
                 placeholder='Caster Class'
               />
-            </div>
-          </div>
-          <div>
-            <label>Archetype</label>
-            <div>
-              <input
+        </Form.Group>
+           <Form.Group controlId="spellArchetype">
+            <Form.Label>Archetype</Form.Label>
+         
+              <Form.Control
                 name='archetype'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.archetype}
                 placeholder='Archetype'
               />
-            </div>
-          </div>
-          <div>
-            <label>Circles</label>
-            <div>
-              <input
+          </Form.Group>
+           <Form.Group controlId="spellCircles">
+            <Form.Label>Circles</Form.Label>
+            
+              <Form.Control
                 name='circles'
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.circles}
                 placeholder='Circles'
               />
-            </div>
-          </div>
-          <div>
-            <button type='submit'>Submit</button>
-          </div>
-        </form>
+      </Form.Group>
+    <Button variant="success" type="submit">
+    Submit
+  </Button>
+        </Form>
       </div>
     );
   }
