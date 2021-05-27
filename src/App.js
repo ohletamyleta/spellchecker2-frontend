@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import SpellsPage from './containers/SpellsPage';
-import SpellForm from './components/SpellForm';
-import SpellDetail from './components/SpellDetail';
+import SpellForm from './containers/SpellForm';
+import SpellDetail from './containers/SpellDetail';
 import Home from './components/Home';
 
 
