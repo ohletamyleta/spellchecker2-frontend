@@ -6,6 +6,8 @@ import { bindActionCreators } from 'redux';
 
 import * as actions from '../actions/spellActions';
 
+import Container from 'react-bootstrap/Container'
+
 import SpellsList from '../components/SpellsList';
 // import SearchBar from '../components/SearchBar';
 
@@ -31,11 +33,17 @@ class SpellsPage extends Component {
 
 
       return (
-        <div className='container'>
-          <h2>Spell Scroll Library</h2>
+        <Container fluid>
+        <div className='text-center'>
+  
+          <h1>Spell Scroll Library</h1>
+          <br></br>
+          <br></br>
           {/* <SearchBar spells={spells}/> */}
           <SpellsList spells={spells} fallback={'loading...'} />
+       
         </div>
+        </Container>
       );
     }
 }

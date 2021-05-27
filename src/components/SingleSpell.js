@@ -10,16 +10,17 @@ const SingleSpell = (props) => {
       <div className='SpellCard'>
         <h2 key={spell.id}>{spell.attributes.name}</h2>
         <p>{spell.attributes.desc}</p>
-        <p>
+        <h5>
           <strong>{spell.attributes.level}</strong>
-        </p>
-        <h4>
+        </h5>
+        <h3>
           <em>
             <Link to={`/spell/${spell.id}`}>
               More Details
             </Link>
           </em>
-        </h4>
+        </h3>
+          <br></br>
       </div>
     </div>
   );
