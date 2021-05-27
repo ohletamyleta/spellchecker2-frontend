@@ -32,4 +32,5 @@ return (
 
 
 
+
 export default DetailPage;
