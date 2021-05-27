@@ -2,13 +2,12 @@
 // NAME, DESC, LEVEL, DND_CLASS
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
 import * as actions from '../actions/spellActions';
 
 import SpellsList from '../components/SpellsList';
-import SpellDetail from '../components/SpellDetail';
+
 
 
 

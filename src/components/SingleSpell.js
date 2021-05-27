@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import SpellDetail from '../components/SpellDetail';
+
 
 const SingleSpell = (props) => {
   let { spell } = props;
-// console.log(spell);
+
   return (
     <div>
       <div className='SpellCard'>
@@ -28,4 +28,3 @@ const SingleSpell = (props) => {
 
    export default withRouter(SingleSpell);
 
-  //  key={spell.id} spell={props}

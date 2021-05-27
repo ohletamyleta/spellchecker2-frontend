@@ -8,8 +8,6 @@ const addSpell = spell => ({
   spell,
 });
 
-
- 
 // ** Asynchronous Action Creators **
 // If a function (e.g. a thunk) is dispatched, redux-thunk calls that function, passing in the store's dispatch and getState. 
 // The middleware intercepts the thunk so it does not go directly to the reducer 
