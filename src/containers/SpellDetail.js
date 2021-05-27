@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getSingleSpell } from '../components/services';
-import { connect, useSelector } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-import * as actions from '../actions/spellActions';
 
 
 import DetailPage from '../components/DetailPage';
@@ -32,13 +28,10 @@ const SpellDetail = () => {
     }  
   }, []);
 
-// console.log(spell);
 
  
   return (
     <div className="detail-card">
-    
-      <h2>OY!</h2>
       <DetailPage spell={spell} />
     </div>
 

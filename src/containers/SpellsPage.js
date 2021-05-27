@@ -9,10 +9,6 @@ import * as actions from '../actions/spellActions';
 import SpellsList from '../components/SpellsList';
 
 
-import SpellDetail from '../components/SpellDetail';
-
-
-
 class SpellsPage extends Component {
 
 
@@ -27,19 +23,19 @@ class SpellsPage extends Component {
       }
 
   }
-
  
-    render() {
+     render() {
     
      const {
-       spells,
-       match
+       spells
      } = this.props;
 
 
 
       return (
         <div className='container'>
+          <h2>Spell Scroll Library</h2>
+          {/* <SearchBar spells={spells}/> */}
           <SpellsList spells={spells} fallback={'loading...'} />
 
         </div>
