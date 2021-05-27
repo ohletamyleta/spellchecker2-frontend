@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/spellActions';
 
 import SpellsList from '../components/SpellsList';
-// import SearchBar from '../components/SearchBar';
+
 
 class SpellsPage extends Component {
 
@@ -21,6 +21,7 @@ class SpellsPage extends Component {
       if (!spells) {
         fetchSpells();
       }
+
   }
  
      render() {
@@ -30,11 +31,13 @@ class SpellsPage extends Component {
      } = this.props;
 
 
+
       return (
         <div className='container'>
           <h2>Spell Scroll Library</h2>
           {/* <SearchBar spells={spells}/> */}
           <SpellsList spells={spells} fallback={'loading...'} />
+
         </div>
       );
     }
