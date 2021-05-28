@@ -17,3 +17,5 @@ export default function spellReducer(state = [], action) {
     }  
  
 }
+
+//STATE = { SPELLS: [], FILTER: 'All'} ??

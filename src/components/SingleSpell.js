@@ -17,7 +17,7 @@ const SingleSpell = (props) => {
         <Card.Title>{spell.attributes.name}</Card.Title>
         <Card.Text>{spell.attributes.desc}</Card.Text>
         <Card.Text>
-          <small classNmae="text-muted">{spell.attributes.level}</small>
+          <small className="text-muted">{spell.attributes.level}</small>
           </Card.Text>
        </Card.Body>
        <Card.Footer> 

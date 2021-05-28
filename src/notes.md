@@ -1,29 +1,33 @@
 add to footer:
 <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-<div>Icons made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+Code snippets for implementing search bar (React):
 
+      <SearchBar filter={this.state.filter} sort={this.state.sort} updateFilter={this.updateFilter} updateSort={this.updateSort}/>
 
-  return (
-    <div>
-      <div className='SpellCard'>
-        <h2 key={spell.id}>{spell.attributes.name}</h2>
-        <p>{spell.attributes.desc}</p>
-        <h5>
-          <strong>{spell.attributes.level}</strong>
-        </h5>
-        <h3>
-          <em>
-            <Link to={`/spell/${spell.id}`}>
-              More Details
-            </Link>
-          </em>
-        </h3>
-          <br></br>
-      </div>
-    </div>
-  );
+  updateFilter = type  => {
+    this.setState({ filter: type })
+  }
 
+  updateSort = sortBy => {
+    this.setState({ sort: sortBy })
+  }
+
+  calculateDisplaySpells = () => {
+    let filteredSpells = [...this.state.spells]
+    if(this.state.filter !== "All"){
+      filteredSpells =  filteredSpells.filter(spell => spell.type === this.state.filter)        
+    } 
+
+    switch(this.state.sort){
+      case "Alphabetically":
+        return filteredSpells.sort((a,b) => a.name > b.name ? 1 : -1)
+      case "Level":
+          return filteredSpells.sort((a,b) => a.level_int > b.level_int ? 1 : -1)
+      default:
+        return filteredSpells
+    }
+  }
 
 
 
