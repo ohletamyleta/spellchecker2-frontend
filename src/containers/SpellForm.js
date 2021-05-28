@@ -42,6 +42,7 @@ class SpellForm extends Component {
   // debugger;
     this.props.createSpell(this.state);
     this.resetForm();
+    window.location.reload(false);
   };
 
   handleChange = event => {
@@ -71,7 +72,7 @@ class SpellForm extends Component {
                 type='text'
                 value={this.state.name}
                 onChange={this.handleChange}
-                placeholder='Spell Name'
+                placeholder='Spell Name - REQUIRED'
               />
             </Form.Group>
             <Form.Group controlId="formSpellDesc"> 
@@ -81,7 +82,7 @@ class SpellForm extends Component {
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.desc}
-                placeholder='Description'
+                placeholder='Description - REQUIRED'
               />
           </Form.Group>
           <Form.Group controlId="spellHigherLevel">
@@ -174,7 +175,7 @@ class SpellForm extends Component {
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.level}
-                placeholder='Level'
+                placeholder='Level - REQUIRED'
               />
         </Form.Group>
            <Form.Group controlId="spellLevelInt">
@@ -207,7 +208,7 @@ class SpellForm extends Component {
                 type='text'
                 onChange={this.handleChange}
                 value={this.state.dnd_class}
-                placeholder='Caster Class'
+                placeholder='Caster Class - REQUIRED'
               />
         </Form.Group>
            <Form.Group controlId="spellArchetype">

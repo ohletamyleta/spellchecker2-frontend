@@ -18,7 +18,9 @@ class App extends Component {
     return (
   <Router>
     <div>
+      <br></br>
       <NavBar />
+      <br></br>
       <Header />
 
       <Switch>
