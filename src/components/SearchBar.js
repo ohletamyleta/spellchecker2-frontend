@@ -20,6 +20,16 @@
 //         </select>
 //       </label>
 
+    //  <strong>Sort by:</strong>
+    //   <label>
+    //     <input type="radio" value="Alphabetically" name="sort" checked={props.sort === 'Alphabetically'} onChange={(e) => props.updateSort(e.target.value)}/>
+    //     Alphabetically
+    //   </label>
+    //   <label>
+    //     <input type="radio" value="level_int" name="sort" checked={props.sort === 'level_int'} onChange={(e) => props.updateSort(e.target.value)}/>
+    //     level
+    //   </label>
+    //   <br/>
 
 //     </div>
 //   );
@@ -28,3 +38,4 @@
 // }
 
 // export default SearchBar;
+

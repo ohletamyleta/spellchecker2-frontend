@@ -29,6 +29,7 @@ class SpellsPage extends Component {
 
   }
  
+ 
      render() {
     
      const {

@@ -1,5 +1,5 @@
 import React from 'react';
-import map2 from '../assets/map2.jpg'
+
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
 
