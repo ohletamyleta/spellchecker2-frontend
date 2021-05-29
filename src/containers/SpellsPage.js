@@ -53,6 +53,7 @@ class SpellsPage extends Component {
        
           </CardDeck>
           </Row>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </Container>
       );
     }
