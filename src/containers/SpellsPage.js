@@ -12,7 +12,6 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import SpellsList from '../components/SpellsList';
 
 
-
 class SpellsPage extends Component {
 
 
@@ -25,6 +24,7 @@ class SpellsPage extends Component {
       if (!spells) {
         fetchSpells();
       }
+
   }
  
      render() {
@@ -35,6 +35,7 @@ class SpellsPage extends Component {
 
      console.log(spells);
 
+
       return (
         <Container>
           <div className='text-center'>
@@ -44,10 +45,16 @@ class SpellsPage extends Component {
         
           </div>
 
+
           <Row>
             <CardDeck>
               <SpellsList spells={spells} fallback={'loading...'} />
             </CardDeck>
+
+          <SpellsList spells={spells} fallback={'loading...'} />
+
+          </CardDeck>
+
           </Row>
           <div>
             Icons made by{' '}
@@ -62,6 +69,7 @@ class SpellsPage extends Component {
             </a>
           </div>
         </Container>
+
       );
     }
 }

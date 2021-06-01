@@ -1,6 +1,8 @@
+
 import React from 'react';
 
 import SingleSpell from '../components/SingleSpell';
+
 
 
 
@@ -22,4 +24,8 @@ const SpellsList = ({ spells, fallback, match }) => {
   }
 
 
+
 export default SpellsList;
+
+
+
