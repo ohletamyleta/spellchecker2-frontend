@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createSpell } from '../actions/spellActions';
 
-import Container from 'react-bootstrap/Container'
+
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 

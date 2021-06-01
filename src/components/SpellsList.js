@@ -13,9 +13,10 @@ const SpellsList = ({ spells, fallback, match }) => {
   if (!spells || !spells.data.length ) {
     return fallback;
   } else {
-    // console.log(spells);
-    //INSERT FILTER LOGIC HERE??? DEFINE IN IT'S OWN COMPONENT/SERVICES AND IMPORT?
-  
+  console.log(spells);
+ 
+
+
   return spells.data.map((spell, index) => {
   return <SingleSpell spell={spell} key={spell.id} />;
 });

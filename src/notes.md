@@ -1,47 +1,16 @@
-add to footer:
-<div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
-Code snippets for implementing search bar (React):
-
-      <SearchBar filter={this.state.filter} sort={this.state.sort} updateFilter={this.updateFilter} updateSort={this.updateSort}/>
-
-  updateFilter = type  => {
-    this.setState({ filter: type })
-  }
-
-  updateSort = sortBy => {
-    this.setState({ sort: sortBy })
-  }
-
-  calculateDisplaySpells = () => {
-    let filteredSpells = [...this.state.spells]
-    if(this.state.filter !== "All"){
-      filteredSpells =  filteredSpells.filter(spell => spell.type === this.state.filter)        
-    } 
-
-    switch(this.state.sort){
-      case "Alphabetically":
-        return filteredSpells.sort((a,b) => a.name > b.name ? 1 : -1)
-      case "Level":
-          return filteredSpells.sort((a,b) => a.level_int > b.level_int ? 1 : -1)
-      default:
-        return filteredSpells
-    }
-  }
-
-
-
-
 // const removeSpell = id => ({
 //   type: 'DELETE_SPELL',
 //   id,
 // });
 
-// const editSpell = spell => ({
+<!-- // const editSpell = spell => ({
 //   type: 'UPDATE_SPELL',
 //   spell,
 // });
 
+    <!-- <button type="submit" className="btn btn-danger margin-right" onClick={() => deleteSpell(id)}>
+      Delete
+    </button> --> -->
 
 // export const deleteSpell = id => dispatch => fetch(`http://localhost:3001/api/v1/spells/${id}`, {
 //   method: 'DELETE',
@@ -54,7 +23,7 @@ Code snippets for implementing search bar (React):
 //   }
 // })
 // .catch(error => console.log(error));
-
+<!-- 
 // export const updateSpell = (spell, id) => dispatch => fetch(`http://localhost:3001/api/v1/spells/${id}`, {
 //   method: 'PUT',
 //   headers: {
@@ -66,4 +35,24 @@ Code snippets for implementing search bar (React):
 // .then((spell) => {
 //   dispatch(editSpell(spell));
 // })
-// .catch(error=> console.log(error));
+// .catch(error=> console.log(error)); -->
+
+<!-- Code snippets for implementing search bar (React):
+
+ 
+  filterList = (spell, searchTerm) => {
+return spell.name.includes(searchTerm) || spell.dnd_class.includes(searchTerm) || spell.desc.includes(searchTerm) 
+};
+
+filteredSpells = spells.filter(this.filterList(this.state.term));
+
+    <label>Search by spell name or caster class</label>
+            <SearchField
+              placeholder='Search item'
+              onChange={(e) => console.log(e.target.value)}
+            /> -->
+<!-- import SearchField from 'react-search-field'; -->
+
+      <!-- <Route path='/search' component={SpellSearch}/> -->
+
+      <!-- import SpellSearch from './containers/SpellSearch'; -->
