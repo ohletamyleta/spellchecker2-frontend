@@ -10,12 +10,9 @@ export default function spellReducer(state = [], action) {
     case 'CREATE_SPELL':
       return state.concat(action.crop);
 
-     
     default:
       return state;
 
     }  
  
 }
-
-//STATE = { SPELLS: [], FILTER: 'All'} ??
