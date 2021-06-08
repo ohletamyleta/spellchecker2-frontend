@@ -1,6 +1,11 @@
 # Spell Checker
 Welcome to SpellChecker, a single page application designed for players of 5th Edition Dungeons and Dragons. This project has a Rails API for the backend, and the front end is built on React JS with Redux middleware. The backend for this project can be found here: https://github.com/ohletamyleta/spellchecker2
 
+VIDEO DEMO: https://youtu.be/9JTTu9kHhIo
+
+BLOG LINK: https://ohletamyleta.medium.com/burnedout-readthis-stillreadthis-a01c1221f5b1?sk=e0df239d5402b5cbf1ce6789390c0109
+
+
 ### Installation
 Clone this repository and execute:
 
